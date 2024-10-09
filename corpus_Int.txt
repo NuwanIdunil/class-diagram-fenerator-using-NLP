@@ -1,0 +1,16 @@
+ID
+Number
+RegNO
+slotNumber
+contactNumber
+age
+No
+grade
+level
+batch
+year
+roomNo
+floorNo
+batch
+NumberOf
+rpm
