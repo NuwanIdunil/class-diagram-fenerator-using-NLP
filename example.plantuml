@@ -1,0 +1,45 @@
+@startuml
+class customer {
+  borrow()
+}
+
+class library {
+  keeps()
+  comprises()
+  issues()
+}
+
+class membership_card {
+  member_unique_number
+  shows()
+}
+
+class classification_mark {
+  denotes()
+}
+
+class type {
+}
+
+class language_tape {
+  title
+  language
+  level
+}
+
+class book {
+  title
+  author
+}
+
+class loan_item {
+  bar_code
+}
+
+library -- membership_card : issues
+type -- language_tape : are
+type -- book : are
+member_name *-- detail : include
+member_address *-- detail : include
+birth *-- detail : include
+@enduml

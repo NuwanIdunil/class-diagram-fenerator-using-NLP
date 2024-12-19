@@ -1,0 +1,68 @@
+@startuml
+class school {
+  multiple_department
+  offers()
+  keeps()
+}
+
+class Science {
+}
+
+class art {
+}
+
+class sport {
+}
+
+class student {
+  age
+  student_ID
+  contact_information
+  name
+}
+
+class course {
+  title
+  description
+  course_ID
+}
+
+class teacher {
+  specialization
+  name
+  teacher_ID
+  contact_information
+  course_ID
+  overseeing()
+  manage()
+}
+
+class record {
+  assigned_teachers
+  enrollment_dates
+  completed_courses
+}
+
+class department {
+  list
+  department_unique_ID
+  name
+}
+
+class Administrative_staff {
+  name
+  staff_ID
+}
+
+school -- department : has
+Science <|-- department : is
+art <|-- department : is
+sport <|-- department : is
+student -- course : enroll
+teacher -- course : includes
+teacher -- department : belong
+school -- record : keeps
+record -- course : includes
+record -- teacher : includes
+teacher o-- department : belong_to
+@enduml
